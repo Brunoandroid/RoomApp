@@ -16,18 +16,22 @@ import kotlinx.android.synthetic.main.fragment_add.*
 
 class AddFragment : Fragment() {
 
-    lateinit var mUserViewModel: UserViewModel
+    lateinit var viewModel: UserViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_add, container, false)
+        return inflater.inflate(R.layout.fragment_add, container, false)
 
-       mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+    }
 
-        return view
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //viewModel = ViewModelProvider.AndroidViewModelFactory(activity!!.application)
+          //  .create(UserViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
     }
 
     private fun insertDataToDatabase(){
