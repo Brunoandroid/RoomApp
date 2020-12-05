@@ -11,27 +11,33 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
+import com.example.roomapp.db.User
 import com.example.roomapp.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
+import kotlinx.android.synthetic.main.fragment_add.view.*
 
 class AddFragment : Fragment() {
 
-    lateinit var viewModel: UserViewModel
+    lateinit var mUserviewModel: UserViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add, container, false)
+        val view = inflater.inflate(R.layout.fragment_add, container, false)
+
+        view.add_btn.setOnClickListener {
+            insertDataToDatabase()
+        }
+
+        return view
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //viewModel = ViewModelProvider.AndroidViewModelFactory(activity!!.application)
-          //  .create(UserViewModel::class.java)
-        viewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserviewModel = ViewModelProvider(this).get(UserViewModel::class.java)
     }
 
     private fun insertDataToDatabase(){
@@ -41,9 +47,9 @@ class AddFragment : Fragment() {
 
         if(inputCheck(firstName, lastName, age)){
             //Cria User Object
-           // val user = User(0, firstName, lastName, Integer.parseInt(age.toString()))
+            val user = User(0, firstName, lastName, Integer.parseInt(age.toString()))
             // Add ao Database
-        //    mUserViewModel.addUser(user)
+            mUserviewModel.addUser(user)
             Toast.makeText(requireContext(), "Adicionado com Sucesso", Toast.LENGTH_LONG).show()
             //Navigate Back
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
