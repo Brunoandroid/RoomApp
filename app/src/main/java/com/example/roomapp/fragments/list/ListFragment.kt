@@ -14,13 +14,15 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Armazena no val a View do Fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
+        // Evento botão para ir o fragment seguinte
         view.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
+        // Retorna View
         return view
     }
 }

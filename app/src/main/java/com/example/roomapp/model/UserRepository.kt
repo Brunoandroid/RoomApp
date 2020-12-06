@@ -8,6 +8,7 @@ class UserRepository(private val userDao: UserDao) {
 
     val readAllData: LiveData<List<User>> = userDao.readAllData()
 
+    // Método adicionar User
     suspend fun addUser(user: User){
         userDao.addUser(user)
     }

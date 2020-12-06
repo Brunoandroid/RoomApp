@@ -9,6 +9,8 @@ import kotlinx.coroutines.CoroutineScope
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {
 
+    //Cria o Database
+
     abstract fun userDao(): UserDao
 
     companion object{
