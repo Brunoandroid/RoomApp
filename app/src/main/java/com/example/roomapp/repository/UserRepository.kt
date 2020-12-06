@@ -1,4 +1,4 @@
-package com.example.roomapp.model
+package com.example.roomapp.repository
 
 import androidx.lifecycle.LiveData
 import com.example.roomapp.db.User
