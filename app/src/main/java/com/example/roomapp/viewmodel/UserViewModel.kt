@@ -13,7 +13,8 @@ import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
-   private val readAllData: LiveData<List<User>> // LiveData
+    // Captura todos os dados da Entidade que esta no db
+    val readAllData: LiveData<List<User>> // LiveData
     private val repository: UserRepository // Repositório
 
     // Inicializa os valores

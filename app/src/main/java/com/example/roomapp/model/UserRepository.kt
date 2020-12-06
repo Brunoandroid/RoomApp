@@ -6,6 +6,7 @@ import com.example.roomapp.db.UserDao
 
 class UserRepository(private val userDao: UserDao) {
 
+    // Captura todos os dados da Entidade que esta no db
     val readAllData: LiveData<List<User>> = userDao.readAllData()
 
     // Método adicionar User

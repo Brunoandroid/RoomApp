@@ -29,6 +29,7 @@ class AddFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_add, container, false)
 
         // Atraves da view aciona o evento do botão
+        // Aciona evento para inserir novo User
         view.add_btn.setOnClickListener {
             insertDataToDatabase()
         }

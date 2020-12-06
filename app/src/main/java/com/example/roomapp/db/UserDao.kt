@@ -15,5 +15,5 @@ interface UserDao {
     suspend fun addUser(user:User)
 
     @Query("SELECT * FROM user_table ORDER BY id ASC")
-    fun readAllData(): LiveData<List<User>>
+    fun readAllData(): LiveData<List<User>>  // Captura todos os dados da Entidade que esta no db
 }
