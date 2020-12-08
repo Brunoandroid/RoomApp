@@ -1,4 +1,4 @@
-package com.example.roomapp.fragments
+package com.example.roomapp.fragments.teste
 
 import androidx.navigation.ActionOnlyNavDirections
 import androidx.navigation.NavDirections

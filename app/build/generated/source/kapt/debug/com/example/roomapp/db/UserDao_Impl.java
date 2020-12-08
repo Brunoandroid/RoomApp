@@ -7,6 +7,7 @@ import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -27,7 +28,11 @@ public final class UserDao_Impl implements UserDao {
 
   private final EntityInsertionAdapter<User> __insertionAdapterOfUser;
 
+  private final EntityDeletionOrUpdateAdapter<User> __deletionAdapterOfUser;
+
   private final EntityDeletionOrUpdateAdapter<User> __updateAdapterOfUser;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAllUsers;
 
   public UserDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -53,6 +58,17 @@ public final class UserDao_Impl implements UserDao {
         stmt.bindLong(4, value.getAge());
       }
     };
+    this.__deletionAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
+      @Override
+      public String createQuery() {
+        return "DELETE FROM `user_table` WHERE `id` = ?";
+      }
+
+      @Override
+      public void bind(SupportSQLiteStatement stmt, User value) {
+        stmt.bindLong(1, value.getId());
+      }
+    };
     this.__updateAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
       @Override
       public String createQuery() {
@@ -76,6 +92,13 @@ public final class UserDao_Impl implements UserDao {
         stmt.bindLong(5, value.getId());
       }
     };
+    this.__preparedStmtOfDeleteAllUsers = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM user_table";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -86,6 +109,23 @@ public final class UserDao_Impl implements UserDao {
         __db.beginTransaction();
         try {
           __insertionAdapterOfUser.insert(user);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, p1);
+  }
+
+  @Override
+  public Object deleteUser(final User user, final Continuation<? super Unit> p1) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __deletionAdapterOfUser.handle(user);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
@@ -110,6 +150,25 @@ public final class UserDao_Impl implements UserDao {
         }
       }
     }, p1);
+  }
+
+  @Override
+  public Object deleteAllUsers(final Continuation<? super Unit> p0) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAllUsers.acquire();
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfDeleteAllUsers.release(_stmt);
+        }
+      }
+    }, p0);
   }
 
   @Override

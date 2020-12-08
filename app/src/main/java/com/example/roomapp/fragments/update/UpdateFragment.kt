@@ -1,12 +1,11 @@
 package com.example.roomapp.fragments.update
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -46,6 +45,9 @@ class UpdateFragment : Fragment() {
             updateItem()
         }
 
+        //Adiciona menu
+        setHasOptionsMenu(true)
+
         return view
     }
 
@@ -73,4 +75,35 @@ class UpdateFragment : Fragment() {
     private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean{
         return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
     }
+
+    // Cria o menu
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    // Captura item selecionado no menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.menu_delete){
+            deleteUser()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    // Deleta Usuario
+    private fun deleteUser() {
+        // Declara o Alerta
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Sim"){ _, _ ->
+            mUserView.deleteUser(args.currentUser)
+            Toast.makeText(requireContext(), "Usuario: ${args.currentUser.firsName} removido com sucesso", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+        }
+        builder.setNegativeButton("Não"){ _, _ ->
+        }
+        builder.setTitle("Delete ${args.currentUser.firsName}?")
+        builder.setMessage("Voce deseja remover ${args.currentUser.firsName}?")
+        // Inicializa o Alerta
+        builder.create().show()
+    }
+
 }
