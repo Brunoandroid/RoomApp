@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomapp.R
@@ -49,7 +50,7 @@ class AddFragment : Fragment() {
     private fun insertDataToDatabase(){
         // Captura os valores do XML
         val firstName = addFirstName_et.text.toString()
-        val lastName = addFirstName_et.text.toString()
+        val lastName = addLastName_et.text.toString()
         val age = addAge.text
 
         // Verifica se os campos não são nulos e insere um User na Tabela
@@ -71,4 +72,5 @@ class AddFragment : Fragment() {
     private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean{
         return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
     }
+
 }
