@@ -27,6 +27,9 @@
             app:destination="@id/listFragment"
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_addFragment_to_testeFragment"
+            app:destination="@id/testeFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
@@ -41,5 +44,16 @@
         <argument
             android:name="currentUser"
             app:argType="com.example.roomapp.db.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/testeFragment"
+        android:name="com.example.roomapp.fragments.Teste"
+        android:label="fragment_teste"
+        tools:layout="@layout/fragment_teste" >
+        <action
+            android:id="@+id/action_testeFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:popUpTo="@id/addFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>

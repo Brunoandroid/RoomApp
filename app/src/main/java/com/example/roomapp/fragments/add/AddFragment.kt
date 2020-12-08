@@ -35,6 +35,10 @@ class AddFragment : Fragment() {
             insertDataToDatabase()
         }
 
+        view.teste.setOnClickListener {
+            teste()
+        }
+
         // Retorna a view
         return view
 
@@ -44,6 +48,10 @@ class AddFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mUserviewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+    }
+
+    private fun teste(){
+        findNavController().navigate(R.id.action_addFragment_to_testeFragment)
     }
 
     // Metodo para inserir um novo User
