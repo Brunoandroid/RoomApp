@@ -1,10 +1,10 @@
 package com.example.roomapp.fragments.list
 
+import android.app.AlertDialog
 import android.os.Bundle
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -41,7 +41,39 @@ class ListFragment : Fragment() {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
+        // Adiciona Menu
+        setHasOptionsMenu(true)
+
         // Retorna View
         return view
+    }
+
+    // Cria Menu
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    // Captura item selecionado no menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_delete) {
+            deleteAllUsers()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    // Deleta todos os Usuarios
+    private fun deleteAllUsers() {
+        // Declara o Alerta
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Sim"){ _, _ ->
+            mUserViewModel.deleteAllUsers()
+            Toast.makeText(requireContext(), "Usuarios Removidos com sucesso", Toast.LENGTH_SHORT).show()
+        }
+        builder.setNegativeButton("Não"){ _, _ ->
+        }
+        builder.setTitle("Deletar")
+        builder.setMessage("Deseja apagar todos os usuarios?")
+        // Inicializa o Alerta
+        builder.create().show()
     }
 }

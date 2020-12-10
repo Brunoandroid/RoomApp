@@ -45,7 +45,7 @@ class UpdateFragment : Fragment() {
             updateItem()
         }
 
-        //Adiciona menu
+        // Adiciona menu
         setHasOptionsMenu(true)
 
         return view
@@ -100,8 +100,8 @@ class UpdateFragment : Fragment() {
         }
         builder.setNegativeButton("Não"){ _, _ ->
         }
-        builder.setTitle("Delete ${args.currentUser.firsName}?")
-        builder.setMessage("Voce deseja remover ${args.currentUser.firsName}?")
+        builder.setTitle("Deletar")
+        builder.setMessage("Apagar ${args.currentUser.firsName}?")
         // Inicializa o Alerta
         builder.create().show()
     }

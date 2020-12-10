@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.roomapp.fragments.list.ListFragment"
-        android:label="List"
+        android:label="Usuarios"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addFragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.roomapp.fragments.add.AddFragment"
-        android:label="Add"
+        android:label="Adicionar"
         tools:layout="@layout/fragment_add" >
         <action
             android:id="@+id/action_addFragment_to_listFragment"
@@ -48,7 +48,7 @@
     <fragment
         android:id="@+id/testeFragment"
         android:name="com.example.roomapp.fragments.teste.Teste"
-        android:label="fragment_teste"
+        android:label="Atualizar"
         tools:layout="@layout/fragment_teste" >
         <action
             android:id="@+id/action_testeFragment_to_addFragment"
