@@ -6,9 +6,9 @@
 RoomApp é uma aplicação desenvolvida para aprender e aplicar o conceito de Room, que é uma biblioteca de persistência que oferece uma camada de abstração sobre o SQLite. Neste projeto é possível criar, listar todo o conteúdo da tabela do banco de dados, além de editar e apagar os valores existentes.
 
 ## Layout mobile
-<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela1Room.jpeg" width="300" height="540">&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela2Room.jpeg" width="300" height="540">&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela3Room.jpeg" width="300" height="540">
+<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela1Room.jpeg" width="300" height="530">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela2Room.jpeg" width="300" height="530">&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela3Room.jpeg" width="300" height="530">
 
 # Tecnologias utilizadas
 
