@@ -7,3 +7,15 @@ RoomApp é uma aplicação desenvolvida para aprender e aplicar o conceitos de R
 
 ## Layout mobile
 <img src="https://github.com/Brunoandroid/Imagens/blob/main/Room.png" width="2000" height="600">
+
+# Tecnologias utilizadas
+
+## Back-end
+- Kotlin
+- Java
+
+# Autor
+
+Bruno Freitas Araujo
+
+https://www.linkedin.com/in/bruno-freitas-b4491a138/
