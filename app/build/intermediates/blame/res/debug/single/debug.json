@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/drawable/ic_add.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/drawable_ic_baseline_delete_24.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/drawable/ic_baseline_delete_24.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/layout_custom_row.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/layout/custom_row.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/layout_fragment_add.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_add.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/menu_delete_menu.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/menu/delete_menu.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/navigation_my_nav.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/navigation/my_nav.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/layout_fragment_update.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_update.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/layout_fragment_teste.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_teste.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/layout_fragment_list.xml.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_list.xml"
+    },
+    {
+        "merged": "/home/bruno/AndroidStudioProjects/RoomApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/bruno/AndroidStudioProjects/RoomApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]
