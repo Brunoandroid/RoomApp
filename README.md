@@ -7,3 +7,6 @@ RoomApp é uma aplicação desenvolvida para aprender e aplicar o conceitos de R
 
 ## Layout mobile
 <img src="https://github.com/Brunoandroid/Imagens/blob/main/tela1Room.jpeg" width="350" height="600">
+<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela2Room.jpeg" width="350" height="600">
+<img src="https://github.com/Brunoandroid/Imagens/blob/main/tela3Room.jpeg" width="350" height="600">
+
