@@ -9,11 +9,20 @@ RoomApp é uma aplicação desenvolvida para aprender e aplicar o conceito de Ro
 <img src="https://github.com/Brunoandroid/Imagens/blob/main/tela2Room.jpeg" width="350" height="600">&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/Brunoandroid/Imagens/blob/main/tela3Room.jpeg" width="350" height="600">
 
+# Arquitetura 
+- MVVM
+
 # Tecnologias utilizadas
 
 ## Back-end
 - Kotlin
 - Java
+
+## Recursos
+- Room
+- Fragment
+- List Adapter
+- RecyclerView
 
 # Autor
 
